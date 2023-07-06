@@ -166,6 +166,24 @@ console.log(siralisayilar);
 /* kodlar buraya */
 
 //3f çözümü
+tekraredensayilar = [];
+let newObject = {};
+for (let i = 0; i < sayilar.length; i++) {
+  if (newObject[sayilar[i]] == undefined) {
+    newObject[sayilar[i]] = 1;
+  } else {
+    newObject[sayilar[i]] += 1;
+  }
+}
+
+for (let key in newObject) {
+  if (newObject[key] > 1) {
+    tekraredensayilar.push(
+      `${key} sayısı ${newObject[key]} kere tekrar edilmiştir`
+    );
+  }
+}
+console.log(tekraredensayilar);
 
 /* kodlar buraya */
 
